@@ -6,19 +6,14 @@ interface Props{
 }
 
 
-    export function Task(){
+    export function Task({content}:Props){
     return(
         <div className={style.task}>
             <div className={style.taskInside}>
             <input type="checkbox" 
-            id={""}
-            content={""}
             />
                 
-                <p>Integer urna interdum massa libero auctor neque turpis 
-                turpis semper. Duis vel sed fames integer.
-                
-                 </p>
+                <p>{content}</p>
             </div>
             <div className={style.trashButton}>
                 <button><Trash /></button>
