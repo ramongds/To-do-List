@@ -38,8 +38,13 @@
     gap: .2rem
 }
 
-.taskAdd form > button:hover{
+.taskAdd form > button:not(:disabled):hover{
     filter: brightness(1.2);
+}
+
+.taskAdd form > button:disabled{
+    filter: brightness(.9);
+    cursor: not-allowed;
 }
 
 .taskAdd form button > svg{
@@ -69,7 +74,7 @@
      border-radius: 1rem;
      color: #D9D9D9;
  }
- 
+
  .list h1{
  color: #4EA8DE;
  }
