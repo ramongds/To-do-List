@@ -6,6 +6,7 @@ import { Task } from "./Task";
 export function Home(){
 
     const [tasks, setTasks] = useState([])
+
     const [captureText , setCaptureText] = useState("") 
     
 
@@ -19,6 +20,14 @@ export function Home(){
 
     function handleCaptureNewText(){
         setCaptureText(event.target.value)
+
+    }
+
+    function deleteTask(taskToDelete){
+        const tasksWithoutDeleteone = tasks.filter(task => {
+            return task != taskToDelete
+        })
+        setTasks(tasksWithoutDeleteone)
 
     }
 
@@ -59,6 +68,7 @@ export function Home(){
                         return <Task 
                         key={task}
                         content={task}
+                        onDeleteTask={deleteTask}
                         />
                     })}
                 </div>
