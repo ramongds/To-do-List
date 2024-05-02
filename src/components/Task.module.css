@@ -7,7 +7,7 @@
     display: flex;
     padding: 1.6rem;
     justify-content: space-evenly;
-    background-color: #333333;
+    background-color: var(--gray-400);
     border-radius: .8rem 0  0 .8rem   ;
     position: relative;
 }
@@ -19,21 +19,21 @@
     cursor: pointer;
     border-radius: 50%;
     appearance: inherit; 
-    border: 2px solid #4EA8DE;
+    border: 2px solid var(--blue);
     position: absolute;
     left: 1.6rem;
     top: 1.6rem;
 }
 
 .taskInside input:hover{
-    background-color: #1e709f41;
+    background-color: var(--blue-dark);
     border: 2px solid #1e709f;
 
 }
 
 .taskInside input:checked{
-    border: 1px solid #5E60CE;
-    background-color: #5E60CE;
+    border: 1px solid var(--purple-dark);
+    background-color: var(--purple-dark);
     background-image: url("data:image/svg+xml,%3Csvg height='10' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.43059 0.342093L4.09865 4.67403L1.61618 2.19156L0.780273 3.02747L4.09865 6.34584L9.26649 1.178L8.43059 0.342093Z' fill='%23F2F2F2'/%3E%3C/svg%3E ");
     background-repeat: no-repeat;
     background-position: center;
@@ -51,7 +51,7 @@
     margin-left: 5.2rem;
 }
 .trashButton{
-    background-color: #333333;
+    background-color: var(--gray-400);
     border-radius:  0 .8rem .8rem 0 ;
 }
 .trashButton svg{
@@ -59,7 +59,7 @@
 }
 
 .trashButton > button{
-    background: #333333;
+    background: var(--gray-400);
     color: #FFFFFF;
     padding: .5rem .5rem .1rem;
     margin:1rem 1rem  0 0 ;
@@ -67,8 +67,8 @@
 }
 
 .trashButton  button:hover{
-    color:#E25858;
-    background-color: #808080;
+    color:var(--red-100);
+    background-color: var(--gray-300);
 }
 
 @media (max-width: 600px){
