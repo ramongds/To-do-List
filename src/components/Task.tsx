@@ -19,7 +19,6 @@ export function Task({ task, onDeleteTask, handleCheckbox }: Props) {
   function handleCheckboxChange() {
     handleCheckbox(task.id);
   }
-
   return (
     <div className={style.task}>
       <div className={style.taskInside}>
@@ -28,7 +27,9 @@ export function Task({ task, onDeleteTask, handleCheckbox }: Props) {
           checked={task.isChecked}
           onChange={handleCheckboxChange}
         />
-        <p>{task.content}</p>
+        <p className={task.isChecked ? style.taskInsideLine : ""}>
+          {task.content}
+        </p>
       </div>
       <div className={style.trashButton}>
         <button onClick={handleDeleteTask}>
