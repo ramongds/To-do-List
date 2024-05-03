@@ -75,7 +75,7 @@ export function Home() {
         <div className={style.taskList}>
           {isTaskListEmpty ? (
             <div className={style.emptyList}>
-              <img src="../src/assets/clipboard.svg" alt="Clipboard" />
+              <img src="public/clipboard.svg" alt="Clipboard" />
               <p>Você ainda não tem tarefas cadastradas</p>
               <span>Crie tarefas e organize seus itens a fazer</span>
             </div>
